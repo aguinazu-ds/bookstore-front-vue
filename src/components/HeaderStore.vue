@@ -1,71 +1,39 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <img
-        src="../assets/book-icon.png"
-        width="40"
-        height="40"
-        data-toggle="dropdown"
-        data-target="#navd"
-        aria-haspopup="true"
-        aria-expanded="false"
-      />
+      <a class="navbar-brand" href="#">
+        <img src="../assets/book-icon.png" width="35" height="35" />
+      </a>
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li
+            class="nav-item searc d-none d-xl-block d-xl-block pr-6 align-self-center"
+          >
+            <input type="search" class="search" />
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
+            <a class="nav-link active" aria-current="page" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Register</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -75,4 +43,37 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+nav {
+  z-index: 100;
+}
+.navbar {
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #f8f8f8;
+}
+.search {
+  outline: none;
+  border: 1px #f8f8f8;
+  background: #ededed url("../assets/search.png") no-repeat 5px center;
+  padding: 5px 8px 0px 26px;
+  width: 10px;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-right: 10px;
+}
+.search:focus {
+  width: 160px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  border-color: #98ccfd;
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+</style>
